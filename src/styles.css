@@ -1,5 +1,4 @@
-/* src/styles.css */
-@import '~ngx-toastr/toastr';
+@import 'ngx-toastr/toastr';
 @import "~@ng-select/ng-select/themes/material.theme.css";
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
