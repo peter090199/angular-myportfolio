@@ -18,12 +18,22 @@ import { DatePipe } from '@angular/common';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { HeaderPageComponent } from './header-page/header-page.component';
 import { FooterPageComponent } from './footer-page/footer-page.component';
-
+import { MatDividerModule } from '@angular/material/divider';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { SkillsComponent } from './skills/skills.component';
+import { EducationComponent } from './education/education.component';
+import { WorkComponent } from './work/work.component';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderPageComponent,
     FooterPageComponent,
+    HomeComponent,
+    AboutComponent,
+    SkillsComponent,
+    EducationComponent,
+    WorkComponent,
     
   ],
   imports: [
@@ -42,7 +52,8 @@ import { FooterPageComponent } from './footer-page/footer-page.component';
     MatMenuModule,
     MatSelectModule,
     MatIconModule,
-    NgSelectModule
+    NgSelectModule,
+    MatDividerModule
   ],
   providers: [DatePipe
   ],

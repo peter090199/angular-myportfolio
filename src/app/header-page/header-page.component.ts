@@ -10,6 +10,10 @@ import { map, shareReplay } from 'rxjs/operators';
   styleUrls: ['./header-page.component.css']
 })
 export class HeaderPageComponent implements OnInit {
+
+  onNavItemClick(sidenav: MatSidenav) {
+    sidenav.close();
+  }
   isMobile$!: Observable<boolean>;
 
   @ViewChild('sidenav') sidenav!: MatSidenav;

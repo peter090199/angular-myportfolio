@@ -1,27 +1,36 @@
 <mat-sidenav-container class="example-container">
-    <mat-sidenav #sidenav mode="over" [opened]="isMobile$ | async">
-      <mat-nav-list>
-        <a mat-list-item href="#">Link 1</a>
-        <a mat-list-item href="#">Link 2</a>
-        <a mat-list-item href="#">Link 3</a>
-      </mat-nav-list>
-    </mat-sidenav>
-    
-    <mat-sidenav-content>
-      <mat-toolbar>
-        <button mat-icon-button (click)="sidenav.toggle()">
-          <mat-icon>menu</mat-icon>
-        </button>
-        <span>My Portfolio</span>
-        <span class="example-spacer"></span>
-        <button mat-icon-button aria-label="Favorite">
-          <mat-icon>favorite</mat-icon>
-        </button>
-        <button mat-icon-button aria-label="Share">
-          <mat-icon>share</mat-icon>
-        </button>
-      </mat-toolbar>
-      <router-outlet></router-outlet>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
+  <mat-sidenav #sidenav mode="over" [opened]="isMobile$ | async">
+    <mat-nav-list class="sidebar">
+      <a mat-list-item [routerLink]="['/home']" (click)="onNavItemClick(sidenav)">Home</a>
+      <a mat-list-item [routerLink]="['/about']" (click)="onNavItemClick(sidenav)">About</a>
+      <a mat-list-item [routerLink]="['/skills']" (click)="onNavItemClick(sidenav)">Skills</a>
+      <a mat-list-item [routerLink]="['/education']" (click)="onNavItemClick(sidenav)">Education</a>
+      <a mat-list-item [routerLink]="['/work']" (click)="onNavItemClick(sidenav)">Work</a>
+    </mat-nav-list>
+  </mat-sidenav>
   
+  <mat-sidenav-content>
+    <mat-toolbar>
+      <button mat-icon-button class="toggle-button" (click)="sidenav.toggle()">
+        <mat-icon class="menu-icon" *ngIf="!(sidenav.opened)">menu</mat-icon>
+        <mat-icon class="close-icon" *ngIf="sidenav.opened">close</mat-icon>
+      </button>
+      <span>My Portfolio</span>
+      <span class="example-spacer"></span>
+      <section>
+        <div class="example-button-row">
+          <button mat-button [routerLink]="['/home']">Home</button>
+          <button mat-button [routerLink]="['/about']">About</button>
+          <button mat-button [routerLink]="['/skills']">Skills</button>
+          <button mat-button [routerLink]="['/education']">Education</button>
+          <button mat-button [routerLink]="['/work']">Work</button>
+        </div>
+      </section>
+    </mat-toolbar>
+    
+    <router-outlet></router-outlet>
+
+    <mat-divider></mat-divider>
+    <app-footer-page></app-footer-page>
+  </mat-sidenav-content>
+</mat-sidenav-container>

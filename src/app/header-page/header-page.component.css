@@ -1,18 +1,88 @@
 .example-container {
-    height: 100%;
-  }
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+mat-sidenav-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   
-  mat-toolbar {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+mat-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+
+}
+
+router-outlet {
+  flex: 1;
+}
+
+.sidebar {
+  width: 20%; /* Width of the sidebar */
+  height: 100vh; /* Full height of the viewport */
+  position: fixed;
+  background-color: whitesmoke;
+
+}
+.sidebar a:hover {
+  color:blue;
+
+}
+.sidebar:hover ~ .content {
+  margin-left: 260px; /* Adjust margin to match sidebar width on hover */
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px; /* Adjust the width for smaller screens */
   }
-  
-  .example-spacer {
-    flex: 1 1 auto;
+  .sidebar:hover {
+    width: 210px; /* Slightly increase width on hover for smaller screens */
   }
-  
-  mat-sidenav {
-    width: 250px;
+}
+.toggle-button {
+  position: relative;
+}
+
+.menu-icon, .close-icon {
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.close-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.toggle-button .mat-icon {
+  transition: opacity 0.3s ease;
+}
+
+.toggle-button .menu-icon.ng-hide {
+  opacity: 0;
+}
+
+.toggle-button .close-icon.ng-show {
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .toggle-button {
+    display: none;
   }
-  
+}
+
+
+
