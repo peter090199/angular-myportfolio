@@ -1,24 +1,54 @@
-.home-introduction {
-    text-align: center;
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
     padding: 20px;
-    margin:auto;
   }
   
-  .home-introduction h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+  .profile-image {
+    flex: 0 0 auto;
   }
   
-  .home-introduction p {
+  .profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff; /* Optional: adds a border around the image */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Optional: adds a shadow effect */
+  }
+  
+  .profile-info {
+    flex: 1;
+  }
+  
+  .profile-info h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .profile-info h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #666; /* Optional: adjusts the color of the subtitle */
+  }
+  
+  .profile-info p {
     font-size: 1.2em;
-    margin-bottom: 0px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
   
-  .intro-image {
-    max-width: 100%;
-    height: auto;
-    margin-top: 20px;
+  .profile-info h1,
+  .profile-info h2 {
+    animation: fadeIn 2s ease-in-out;
   }
-  /* Inside your component's CSS file */
-
   
