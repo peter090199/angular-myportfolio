@@ -24,6 +24,7 @@ import { AboutComponent } from './about/about.component';
 import { SkillsComponent } from './skills/skills.component';
 import { EducationComponent } from './education/education.component';
 import { WorkComponent } from './work/work.component';
+import { TypewriterComponent } from './typewriter/typewriter.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +35,7 @@ import { WorkComponent } from './work/work.component';
     SkillsComponent,
     EducationComponent,
     WorkComponent,
+    TypewriterComponent,
     
   ],
   imports: [

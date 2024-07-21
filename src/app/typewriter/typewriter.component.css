@@ -1,0 +1,7 @@
+.typewriter h1 {
+    overflow: hidden; /* Ensures text is hidden during animation */
+    white-space: nowrap; /* Keeps text in a single line */
+    margin: 0 auto; /* Centers the text */
+    letter-spacing: .15em; /* Adjusts spacing */
+  }
+  

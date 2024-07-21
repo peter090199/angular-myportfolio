@@ -3,6 +3,7 @@
     align-items: center;
     gap: 20px;
     padding: 20px;
+    justify-content: space-between; 
   }
   
   .profile-image {
@@ -17,10 +18,11 @@
     border: 3px solid #fff; /* Optional: adds a border around the image */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Optional: adds a shadow effect */
   }
-  
   .profile-info {
-    flex: 1;
+    flex: 1; /* Allows the profile info to take up available space */
+    text-align: left; /* Align text to the left */
   }
+  
   
   .profile-info h1 {
     font-size: 2em;
@@ -36,7 +38,7 @@
   .profile-info p {
     font-size: 1.2em;
     line-height: 1.6;
-    margin-bottom: 10px;
+    margin-top: 10px;
   }
   @keyframes fadeIn {
     from {
@@ -52,3 +54,46 @@
     animation: fadeIn 2s ease-in-out;
   }
   
+  @keyframes letterFadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .profile-info h1 span,
+  .profile-info h2 span {
+    display: inline-block;
+    opacity: 0;
+    animation: letterFadeIn 0.5s ease forwards;
+  }
+  
+  .profile-info h1 span:nth-child(1) { animation-delay: 0.1s; }
+  .profile-info h1 span:nth-child(2) { animation-delay: 0.2s; }
+  /* Add more delays for each subsequent letter */
+  @keyframes letterBounce {
+    0% {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+    50% {
+      transform: translateY(10px);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .profile-info h1 span,
+  .profile-info h2 span {
+    display: inline-block;
+    opacity: 0;
+    animation: letterBounce 0.6s ease forwards;
+  }
+  
+  .profile-info h1 span:nth-child(1) { animation-delay: 0.1s; }
+  .profile-info h1 span:nth-child(2) { animation-delay: 0.2s; }
+  /* Add more delays for each subsequent letter */
