@@ -16,10 +16,14 @@ import {ToastrModule} from 'ngx-toastr';
 import { MaterialModule } from 'src/Material/Material.module';
 import { DatePipe } from '@angular/common';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { HeaderPageComponent } from './header-page/header-page.component';
+import { FooterPageComponent } from './footer-page/footer-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    HeaderPageComponent,
+    FooterPageComponent,
     
   ],
   imports: [
