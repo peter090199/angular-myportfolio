@@ -10,6 +10,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import {ToastrModule} from 'ngx-toastr';
+import { MaterialModule } from 'src/Material/Material.module';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -20,15 +25,22 @@ import { MatMenuModule } from '@angular/material/menu';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    MaterialModule,
+    ToastrModule,
+    ToastrModule.forRoot(),
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
     MatToolbarModule,
     MatSidenavModule,
     MatFormFieldModule,
+    MatMenuModule,
     MatSelectModule,
     MatIconModule,
-    MatMenuModule
- 
+
   ],
-  providers: [],
+  providers: [DatePipe
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
