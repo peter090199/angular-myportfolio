@@ -15,6 +15,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import {ToastrModule} from 'ngx-toastr';
 import { MaterialModule } from 'src/Material/Material.module';
 import { DatePipe } from '@angular/common';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { DatePipe } from '@angular/common';
     MatMenuModule,
     MatSelectModule,
     MatIconModule,
-
+    NgSelectModule
   ],
   providers: [DatePipe
   ],
