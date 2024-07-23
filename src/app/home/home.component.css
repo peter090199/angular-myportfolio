@@ -4,7 +4,8 @@
     gap: 20px;
     padding: 20px;
     justify-content: space-between; 
-    width: 88%;
+    width: 100%;
+ 
   }
   
   .profile-image {
@@ -99,3 +100,32 @@
   .profile-info h1 span:nth-child(1) { animation-delay: 0.1s; }
   .profile-info h1 span:nth-child(2) { animation-delay: 0.2s; }
   /* Add more delays for each subsequent letter */
+
+  /* home.component.css */
+
+/* Basic styles for the home component */
+:host {
+  display: block;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Styling the fade sections */
+.fade-section {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+  margin: 50px 0;
+}
+
+/* Styling the heading */
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Styling the paragraph */
+p {
+  font-size: 1.2em;
+  color: #666;
+}

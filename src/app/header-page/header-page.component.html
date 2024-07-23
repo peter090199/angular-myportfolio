@@ -1,36 +1,40 @@
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
 <mat-sidenav-container class="example-container">
   <mat-sidenav #sidenav mode="over" [opened]="isMobile$ | async">
     <mat-nav-list class="sidebar">
-      <a mat-list-item [routerLink]="['/home']" (click)="onNavItemClick(sidenav)">Home</a>
-      <a mat-list-item [routerLink]="['/about']" (click)="onNavItemClick(sidenav)">About</a>
-      <a mat-list-item [routerLink]="['/skills']" (click)="onNavItemClick(sidenav)">Skills</a>
-      <a mat-list-item [routerLink]="['/education']" (click)="onNavItemClick(sidenav)">Education</a>
-      <a mat-list-item [routerLink]="['/work']" (click)="onNavItemClick(sidenav)">Work</a>
+      <a mat-list-item class="nav-link" [routerLink]="['/home']" (click)="onNavItemClick(sidenav)" href="#home">Home</a>
+      <a mat-list-item class="nav-link" [routerLink]="['/about']" (click)="onNavItemClick(sidenav)" href="#about">About</a>
+      <a mat-list-item class="nav-link" [routerLink]="['/skills']" (click)="onNavItemClick(sidenav)" href="#skills">Skills</a>
+      <a mat-list-item class="nav-link" [routerLink]="['/education']" (click)="onNavItemClick(sidenav)" href="#education">Education</a>
+      <a mat-list-item class="nav-link" [routerLink]="['/work']" (click)="onNavItemClick(sidenav)" href="#work">Work</a>
     </mat-nav-list>
   </mat-sidenav>
   
   <mat-sidenav-content>
     <mat-toolbar>
-      <button mat-icon-button class="toggle-button" (click)="sidenav.toggle()">
-        <mat-icon class="menu-icon" *ngIf="!(sidenav.opened)">menu</mat-icon>
-        <mat-icon class="close-icon" *ngIf="sidenav.opened">close</mat-icon>
-      </button>
-      <span>My Portfolio</span>
-      <span class="example-spacer"></span>
-      <section>
-        <div class="example-button-row">
-          <button mat-button [routerLink]="['/home']">Home</button>
-          <button mat-button [routerLink]="['/about']">About</button>
-          <button mat-button [routerLink]="['/skills']">Skills</button>
-          <button mat-button [routerLink]="['/education']">Education</button>
-          <button mat-button [routerLink]="['/work']">Work</button>
-        </div>
-      </section>
+      <nav class="navbar navbar-expand-sm bg-primary navbar-dark fixed-top">
+        <div class="container-fluid">
+          <button mat-icon-button class="toggle-button" (click)="sidenav.toggle()">
+              <mat-icon class="menu-icon" *ngIf="!(sidenav.opened)">menu</mat-icon>
+              <mat-icon class="close-icon" *ngIf="sidenav.opened">X</mat-icon>
+              </button>
+              <span>My Portfolio</span>
+              <span class="example-spacer"></span>
+              <div class="example-button-row">
+                
+                <button  *ngIf="!(isMobile$ | async)"  class="nav-link"  mat-button [routerLink]="['/home']">Home</button>
+                <button  *ngIf="!(isMobile$ | async)" class="nav-link"  mat-button [routerLink]="['/about']">About</button>
+                <button  *ngIf="!(isMobile$ | async)" class="nav-link"  mat-button [routerLink]="['/skills']">Skills</button>
+                <button  *ngIf="!(isMobile$ | async)" class="nav-link"  mat-button [routerLink]="['/education']">Education</button>
+                <button  *ngIf="!(isMobile$ | async)" class="nav-link"  mat-button [routerLink]="['/work']" >Work</button>
+              </div>
+          </div>
+      </nav>
     </mat-toolbar>
     
     <router-outlet></router-outlet>
-
     <mat-divider></mat-divider>
     <app-footer-page></app-footer-page>
   </mat-sidenav-content>
 </mat-sidenav-container>
+</body>

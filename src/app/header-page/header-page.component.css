@@ -1,7 +1,22 @@
+body {
+  position: relative; 
+}
 .example-container {
   flex-direction: column;
-  background-color: white;
 }
+.nav-link {
+  cursor: pointer;
+  text-decoration: none;
+}
+.nav-link:hover {
+  background-color: gainsboro;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  color: #1976d2;
+}
+
 mat-sidenav-content {
   flex: 1;
   display: flex;
@@ -10,6 +25,7 @@ mat-sidenav-content {
 }
 .example-spacer {
   flex: 1 1 auto;
+ 
 }
 
 mat-toolbar {
@@ -80,6 +96,8 @@ router-outlet {
     display: none;
   }
 }
+
+
 
 
 

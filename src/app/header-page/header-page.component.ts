@@ -13,6 +13,15 @@ export class HeaderPageComponent implements OnInit {
 
   onNavItemClick(sidenav: MatSidenav) {
     sidenav.close();
+    
+  }
+  isClicked = false;
+
+  handleClick() {
+    this.isClicked = !this.isClicked;
+    setTimeout(() => {
+      this.isClicked = false; // Reset after the transition
+    }, 300); 
   }
   isMobile$!: Observable<boolean>;
 
