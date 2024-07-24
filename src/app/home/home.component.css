@@ -1,23 +1,25 @@
 .profile-container {
-    display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
     padding: 20px;
-    justify-content: space-between; 
+
     width: 100%;
  
   }
   
   .profile-image {
     flex: 0 0 auto;
+   float: left;
+   padding: 30px;
+   margin-top: 0px;
   }
   
   .profile-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+    width: 200px;
+    height: 210px;
+    border-radius: 2%;
     object-fit: cover;
-    border: 3px solid #fff; /* Optional: adds a border around the image */
+    border: 1px solid #fff; /* Optional: adds a border around the image */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Optional: adds a shadow effect */
   }
   .profile-info {
@@ -39,9 +41,13 @@
   }
   
   .profile-info p {
-    font-size: 1.2em;
+    font-size:18px;
     line-height: 1.6;
-    margin-top: 10px;
+    margin-top: 20px;
+    float: right;
+    width: 80%;
+    text-align: left;
+    padding-right:50;
   }
   @keyframes fadeIn {
     from {
@@ -128,4 +134,17 @@ h1 {
 p {
   font-size: 1.2em;
   color: #666;
+}
+.button button{
+  float: left;
+  margin-top: 2px;
+  border-radius: 8px;
+  margin-left: 8px;
+  position: relative;
+}
+
+.button button:hover{
+  background-color: whitesmoke;
+  color: black;
+ 
 }

@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./typewriter.component.css']
 })
 export class TypewriterComponent implements OnInit {
-  text: string = 'Hello, Im Pedro L. Yorpo Jr.,';
+  text: string = 'Hello, Im Pedro L. Yorpo Jr.';
 
   displayedText: string = '';
   typingSpeed: number = 100;
