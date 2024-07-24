@@ -26,7 +26,8 @@ import { EducationComponent } from './education/education.component';
 import { WorkComponent } from './work/work.component';
 import { TypewriterComponent } from './typewriter/typewriter.component';
 import { ScrollFade } from './scroll-fade.directive/scroll-fade.directive.component';
-import { ScrollSpyDirective } from './scroll-spy.directive'; 
+import { ScrollSpyDirective } from './scroll-spy.directive';
+import { AnimationsComponent } from './animations/animations.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ScrollSpyDirective } from './scroll-spy.directive';
     WorkComponent,
     TypewriterComponent,
     ScrollFade,
-    ScrollSpyDirective
+    ScrollSpyDirective,
+    AnimationsComponent
  
     
   ],
