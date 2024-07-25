@@ -38,7 +38,7 @@ router-outlet {
   width: 20%; /* Width of the sidebar */
   height: 100vh; /* Full height of the viewport */
   position: fixed;
-  background-color: whitesmoke;
+ background-color: whitesmoke;
 
 }
 .sidebar a:hover {
@@ -63,7 +63,6 @@ router-outlet {
 
 .menu-icon, .close-icon {
   transition: opacity 0.3s ease;
-  opacity: 1;
 }
 
 .close-icon {

@@ -1,0 +1,30 @@
+.skills-container {
+    width: 80%;
+    margin: auto;
+   
+  }
+  
+  .skills-container h1 {
+    font-size: 25px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+  }
+  
+  .skills-container h2 {
+    font-size: 2em;
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .skills-container p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .skills-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+  
