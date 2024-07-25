@@ -1,6 +1,4 @@
-body {
-  position: relative; 
-}
+
 .example-container {
   flex-direction: column;
 }
@@ -12,10 +10,7 @@ body {
   background-color: gainsboro;
 }
 
-.nav-link.active {
-  font-weight: bold;
-  color: #1976d2;
-}
+
 
 mat-sidenav-content {
   flex: 1;

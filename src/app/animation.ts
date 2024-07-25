@@ -14,11 +14,11 @@ export const slideUpDownAnimation = trigger('slideUpDownAnimation', [
 
 // Horizontal Slide Left/Right Animation
 export const slideLeftRightAnimation = trigger('slideLeftRightAnimation', [
-  transition(':enter', [
+  transition(':leave', [
     style({ transform: 'translateX(-100%)', opacity: 0 }),
     animate('500ms ease-out', style({ transform: 'translateX(0)', opacity: 1 }))
   ]),
-  transition(':leave', [
+  transition(':enter', [
     animate('700ms ease-in', style({ transform: 'translateX(100%)', opacity: 0 }))
   ])
 ]);
