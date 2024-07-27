@@ -1,0 +1,58 @@
+.work-container {
+    width: 80%;
+    margin: auto;
+  }
+  
+  section {
+    animation: slideUpDown 0.5s ease-out;
+  }
+  h1{
+    font-size: 25px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+
+  }
+  
+  .work-item {
+    margin-bottom: 20px;
+    border-left: 4px solid #4caf50; /* Green line for visual separation */
+    padding-left: 15px;
+  }
+  
+  .job-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333; /* Dark grey for the job title */
+    margin-bottom: 5px;
+  }
+  p{
+    font-size: 20px;
+  }
+  .job-details {
+    font-size: 14px;
+    color: #666; /* Medium grey for the details */
+  }
+  
+  .company {
+    font-weight: bold;
+  }
+  
+  .duration {
+    font-style: italic;
+  }
+  
+  .description {
+    margin-top: 10px;
+  }
+  
+  @keyframes slideUpDown {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  

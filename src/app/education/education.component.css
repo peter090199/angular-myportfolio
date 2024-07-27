@@ -1,0 +1,58 @@
+.education-container {
+       width: 80%;
+    margin: auto;
+  }
+  h1{
+    font-size: 25px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+
+  }
+  p{
+    font-size: 20px;
+  }
+  section {
+    animation: slideUpDown 0.5s ease-out;
+  }
+  
+  .education-item {
+    margin-bottom: 20px;
+    border-left: 4px solid #4caf50; /* Green line for visual separation */
+    padding-left: 15px;
+  }
+  
+  .education-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333; /* Dark grey for the degree title */
+    margin-bottom: 5px;
+  }
+  
+  .education-details {
+    font-size: 14px;
+    color: #666; /* Medium grey for the details */
+  }
+  
+  .institution {
+    font-weight: bold;
+  }
+  
+  .duration {
+    font-style: italic;
+  }
+  
+  .description {
+    margin-top: 10px;
+  }
+  
+  @keyframes slideUpDown {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  

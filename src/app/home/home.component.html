@@ -1,21 +1,18 @@
 <div class="container-fluid">
-<div class="profile-image" @slideUpDownAnimation>
-  <img  src="assets/images/me.jpg" alt="profile" class="profile-img">
-</div>
+  <div class="profile-image" @slideUpDownAnimation>
+    <img  src="assets/images/me.jpg" alt="profile" class="profile-img">
+  </div>
 
   <div class="profile-info"@slideUpDownAnimation >
       <p ><br>
         <app-typewriter></app-typewriter>
-        a passionate Software Engineer with a love for creating innovative solutions and tackling challenging problems.<br> 
-        Here you can find some of my recent projects, achievements, and more about what I do.
-      
-        Feel free to explore the different sections of my portfolio to learn more about my work and interests.
+       a passionate Full Stack Developer with extensive experience in building dynamic and responsive web applications. With a solid foundation in both front-end and back-end technologies, 
+        I excel in creating seamless user experiences and robust server-side functionality.
       </p>
-      <button  mat-stroked-button>Contact Me</button>
-      <button  mat-stroked-button>My CV</button>
+      <button mat-raised-button color="primary" (click)="openImage()">Open CV</button>
+      <!-- <button type="button"  class="btn btn-primary" (click)="openDialog()">My Curriculum Vitae</button> -->
   </div>
 
-  
 </div>
 
  

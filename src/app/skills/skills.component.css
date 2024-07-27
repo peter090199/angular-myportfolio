@@ -27,4 +27,62 @@
     height: auto;
     margin-top: 20px;
   }
+  .skills-container {
+    padding: 20px;
+  }
+  
+  .skill {
+    margin-bottom: 15px;
+  }
+  .skill-level {
+    font-size: 14px;
+    margin-top: 5px;
+    color: #555; /* Dark grey color for the proficiency level text */
+  }
+  .skill-name {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .progress-bar {
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    height: 20px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+  }
+  
+  .progress {
+    background-color: #4caf50; /* Initial color */
+    height: 100%;
+    width: 0%;
+    transition: width 0.5s ease, background-color 0.5s ease; /* Animate both width and color */
+    animation: colorChange 3s infinite; /* Optional: color animation */
+  }
+  section {
+    animation: slideUpDown 0.8s ease-out;
+  }
+  
+  @keyframes colorChange {
+    0% { background-color: #4caf50; }
+    50% { background-color: #ff9800; }
+    100% { background-color: #4caf50; }
+  }
+  @keyframes slideUpDown {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .skill-level {
+    font-size: 14px;
+    margin-top: 5px;
+  }
   

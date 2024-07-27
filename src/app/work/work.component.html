@@ -1,1 +1,15 @@
-<p>work works!</p>
+<div class="work-container">
+    <section @slideUpDownAnimation>
+      <h1>Work Experience</h1>
+      
+      <div *ngFor="let job of workExperience" class="work-item">
+        <div class="job-title">{{ job.position }}</div>
+        <div class="job-details">
+          <p class="company">{{ job.company }}</p>
+          <p class="duration">{{ job.startDate }} - {{ job.endDate }}</p>
+          <p class="description">{{ job.description }}</p>
+        </div>
+      </div>
+    </section>
+  </div>
+  

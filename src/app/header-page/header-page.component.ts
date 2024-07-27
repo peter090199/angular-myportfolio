@@ -10,7 +10,7 @@ import { map, shareReplay } from 'rxjs/operators';
   styleUrls: ['./header-page.component.css']
 })
 export class HeaderPageComponent implements OnInit {
-
+  isLoading = true; // Start with loading true
   onNavItemClick(sidenav: MatSidenav) {
     sidenav.close();
     
@@ -35,5 +35,12 @@ export class HeaderPageComponent implements OnInit {
         map(result => result.matches),
         shareReplay()
       );
+    this.loadData();
+  }
+  loadData() {
+    // Simulate loading with a timeout (replace this with actual data fetching)
+    setTimeout(() => {
+      this.isLoading = false; // Set loading to false after data is fetched
+    }, 3000); // Adjust time as necessary
   }
 }

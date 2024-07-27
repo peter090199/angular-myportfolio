@@ -28,6 +28,9 @@ import { TypewriterComponent } from './typewriter/typewriter.component';
 import { ScrollFade } from './scroll-fade.directive/scroll-fade.directive.component';
 import { ScrollSpyDirective } from './scroll-spy.directive';
 import { AnimationsComponent } from './animations/animations.component';
+import { ModalComponent } from './modal/modal.component';
+import { PdfViewerComponent } from './pdf-viewer/pdf-viewer.component';
+import { ImageDialogComponent } from './image-dialog/image-dialog.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +45,10 @@ import { AnimationsComponent } from './animations/animations.component';
     TypewriterComponent,
     ScrollFade,
     ScrollSpyDirective,
-    AnimationsComponent
+    AnimationsComponent,
+    ModalComponent,
+    PdfViewerComponent,
+    ImageDialogComponent,
  
     
   ],
@@ -63,7 +69,7 @@ import { AnimationsComponent } from './animations/animations.component';
     MatSelectModule,
     MatIconModule,
     NgSelectModule,
-    MatDividerModule
+    MatDividerModule,
   ],
   providers: [DatePipe
   ],

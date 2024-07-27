@@ -1,1 +1,15 @@
-<p>education works!</p>
+<div class="education-container">
+    <section @slideUpDownAnimation>
+      <h1>Education</h1>
+      
+      <div *ngFor="let item of education" class="education-item">
+        <div class="education-title">{{ item.degree }}</div>
+        <div class="education-details">
+          <p class="institution">{{ item.institution }}</p>
+          <p class="duration">{{ item.startDate }} - {{ item.endDate }}</p>
+          <p class="description">{{ item.description }}</p>
+        </div>
+      </div>
+    </section>
+  </div>
+  
